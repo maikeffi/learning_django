@@ -1,0 +1,25 @@
+{% extends "pyrunner/base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col"></div>
+    <div class="card-body">
+                    <!-- .form -->
+                    <form action="runfile" method="post">{% csrf_token %}
+                      <!-- .fieldset -->
+                      <fieldset>
+                        <legend>Run Python Program</legend>
+                        <input type="text" name="info_name" value="">
+                        <input type="submit" value="Run">
+                      </fieldset>
+                      <!-- /.fieldset -->
+                    </form>
+                    <!-- /.form -->
+
+                    <p> Python file path : {{ info }} </p>
+                    <p> Out put : {{ output }} </p>
+      </div>
+    <div class="col">
+
+    </div>
+</div>
+{% endblock %}
